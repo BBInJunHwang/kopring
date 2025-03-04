@@ -14,5 +14,5 @@ class UserService(private val userRepository: UserRepository) {
         return userRepository.save(user)
     }
 
-    fun getAllUsers() = userRepository.findAll()
+    fun get(userId: Long) = userRepository.findById(userId).get()
 }
